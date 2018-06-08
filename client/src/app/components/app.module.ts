@@ -35,6 +35,8 @@ import {
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
+import { MapBoxComponent } from './map-box/map-box.component';
+import {MapService} from "../services/map.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,7 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     NavbarComponent,
     ProjectsComponent,
     ProjectDetailComponent,
+    MapBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,7 +127,8 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     RouterModule,
     ApiRequestsService,
     ConfigurationService,
-    AuthGuard
+    AuthGuard,
+    MapService,
   ],
   bootstrap: [AppComponent]
 })

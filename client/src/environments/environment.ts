@@ -7,4 +7,7 @@ export const environment = {
   production: false,
   apiHost:    'http://localhost:4200/',
   apiPrefix:  'api/',
+  mapbox:     {
+    accessToken: 'pk.eyJ1IjoibWFydGluYXZhZ3lhbiIsImEiOiJjamZwZWdiMDAxbGVuMzNsOWtsa21waXN6In0.W09trbbm-h6pTb_JfQ_4jw',
+  }
 };
