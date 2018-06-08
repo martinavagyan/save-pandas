@@ -16,10 +16,10 @@ export class ProfileComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit() {
-    this.apiRequestsService.getUser(this.authService.getUserId()).subscribe(response => {
+    /* this.apiRequestsService.getUser(this.authService.getUserId()).subscribe(response => {
       this.userData = response.local;
       this.userData.id = this.authService.getUserId();
-    });
+    }); */
   }
 
   logout() {

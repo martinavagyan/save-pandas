@@ -17,6 +17,11 @@ import {routing} from "./app.routing";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AuthGuard} from "../auth/auth.guard";
 import {AuthInterceptor} from "../auth/auth-interceptor.service";
+import { StatisticsComponent } from './profile/statistics/statistics.component';
+import { HistoryComponent } from './profile/history/history.component';
+import { FeedbackComponent } from './profile/feedback/feedback.component';
+import { TweetsComponent } from './profile/tweets/tweets.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule,
@@ -39,6 +44,10 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     HomeComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    StatisticsComponent,
+    HistoryComponent,
+    FeedbackComponent,
+    TweetsComponent,
     NavbarComponent,
     ProjectsComponent,
     ProjectDetailComponent,
