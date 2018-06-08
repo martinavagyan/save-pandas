@@ -24,10 +24,12 @@
     "@angular/platform-browser": "^6.0.4",
     "@angular/platform-browser-dynamic": "^6.0.4",
     "@angular/router": "^6.0.4",
+    "chart.js": "^2.7.2",
     "core-js": "^2.5.7",
     "jasmine": "^3.1.0",
     "mapbox-gl": "^0.45.0",
     "mapbox.js": "^3.1.1",
+    "ng2-charts": "^1.6.0",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.0.0-rc.0",
     "zone.js": "^0.8.14"
