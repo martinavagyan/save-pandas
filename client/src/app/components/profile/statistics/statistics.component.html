@@ -5,6 +5,13 @@
     <mat-grid-tile>
       <canvas
         baseChart
+        [chartType]="'bar'"
+        [datasets]="volunteersTrained">
+      </canvas>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <canvas
+        baseChart
         [chartType]="'doughnut'"
         [data]="resourcesGathered"
         [labels]="resourcesGatheredLabels">
@@ -14,13 +21,6 @@
       <canvas
         baseChart
         [chartType]="'bar'"
-        [datasets]="volunteersTrained">
-      </canvas>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <canvas
-        baseChart
-        [chartType]="'line'"
         [datasets]="pandasSaved">
       </canvas>
     </mat-grid-tile>
