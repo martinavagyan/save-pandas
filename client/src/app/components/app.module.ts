@@ -18,6 +18,10 @@ import {routing} from "./app.routing";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AuthGuard} from "../auth/auth.guard";
 import {AuthInterceptor} from "../auth/auth-interceptor.service";
+import { StatisticsComponent } from './profile/statistics/statistics.component';
+import { HistoryComponent } from './profile/history/history.component';
+import { FeedbackComponent } from './profile/feedback/feedback.component';
+import { TweetsComponent } from './profile/tweets/tweets.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import {AuthInterceptor} from "../auth/auth-interceptor.service";
     HomeComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    StatisticsComponent,
+    HistoryComponent,
+    FeedbackComponent,
+    TweetsComponent,
   ],
   imports: [
     BrowserModule,
