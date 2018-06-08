@@ -29,6 +29,7 @@ import {
 } from '@angular/material';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { ProjectsComponent } from './projects/projects.component';
     PageNotFoundComponent,
     NavbarComponent,
     ProjectsComponent,
+    ProjectDetailComponent,
   ],
   imports: [
     BrowserModule,
