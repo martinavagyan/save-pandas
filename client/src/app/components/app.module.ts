@@ -27,6 +27,8 @@ import {
   MatToolbarModule, MatDatepickerModule, MatExpansionModule, MatNativeDateModule, MatPaginatorModule, MatSortModule,
   MatStepperModule, MatTableModule,
 } from '@angular/material';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProjectsComponent } from './projects/projects.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,8 @@ import {
     HomeComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    NavbarComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
