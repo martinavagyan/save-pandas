@@ -19,6 +19,7 @@
     "@angular/core": "^6.0.4",
     "@angular/forms": "^6.0.4",
     "@angular/http": "^6.0.4",
+    "@angular/material": "^6.2.1",
     "@angular/platform-browser": "^6.0.4",
     "@angular/platform-browser-dynamic": "^6.0.4",
     "@angular/router": "^6.0.4",
@@ -26,7 +27,8 @@
     "jasmine": "^3.1.0",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.0.0-rc.0",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "@angular/cdk": "^6.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.7.0-beta.2",
