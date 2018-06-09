@@ -18,9 +18,8 @@ module.exports = (app: any, passport: any) => {
     /**
      * Iota stuff
      * */
-    app.route('/api/transactions/').post(apiController.add_transaction);
-    app.route('/api/transactions/:numberOfTransactions').get(apiController.get_latest_transactions);
-
+    app.route('/api/transaction/').post(apiController.add_transaction);
+    app.route('/api/transaction/:numberOfTransactions').get(apiController.get_latest_transactions);
     /**
      * Testing routes
      * */

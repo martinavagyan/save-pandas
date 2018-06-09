@@ -5,12 +5,19 @@ import {UserModule, IUserModel} from '../models/userModel';
 import TestController from './testController';
 import UserController from './userController';
 
+import * as channelModel from '../models/channelModel';
+import ChannelCtrl from './channelController';
+import IotaService from "../../services/iota-service";
+
 import * as path from 'path';
 import * as jwt from 'jsonwebtoken';
 
 module.exports = (passport: any) => {
     const testCtrl = new TestController<Model<testModel.ITestModel>>(testModel.default);
     const userCtrl = new UserController<Model<IUserModel>>(UserModule);
+    const channelCtrl = new ChannelCtrl<Model<channelModel.IChannelModel>>(channelModel.default);
+
+    const iotaService = new IotaService();
 
     const publicModule: any = {};
 
@@ -93,6 +100,17 @@ module.exports = (passport: any) => {
     publicModule.get_user = (req: any, res: any, next: any) => {
         userCtrl.get(req, res);
     };
+
+    publicModule.add_transaction = (req: any, res: any) => {
+        iotaService.attachMessage(req.body).then((root: any) => {
+            console.log("We got so far, ", root);
+            channelCtrl.insert(root, res);
+        });
+    }
+
+    publicModule.get_latest_transactions = (req: any, res: any) => {
+        channelCtrl.getLatest(iotaService, res, req);
+    }
 
     /**
      * If doing a JWT validation use the follwoing before the api call
