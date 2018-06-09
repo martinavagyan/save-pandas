@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit {
     "image_url": "http://dummyimage.com/400x300.png/dddddd/000000"
   }, {
     "id": 5,
-    "title": "Project A 2 ('A' gai wak juk jap)",
+    "title": "Project A 2",
     "subtitle": "L. Perrigo Company",
     "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
     "full_description": "Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",

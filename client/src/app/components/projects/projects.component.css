@@ -1,6 +1,6 @@
 .example-card {
   border: 1px black solid;
-  max-width: 400px;
+  width: 400px;
   height: 580px;
 }
 
@@ -16,6 +16,16 @@ mat-card-content {
   height: 180px;
 }
 
-mat-card-actions {
-  height: 220px;
+.fade {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.9;
+  background: rgb(116, 212, 241);
+  /* color: white; */
+  cursor: pointer;
 }
