@@ -22,6 +22,7 @@ import { HistoryComponent } from './profile/history/history.component';
 import { FeedbackComponent } from './profile/feedback/feedback.component';
 import { TweetsComponent } from './profile/tweets/tweets.component';
 import { ChartsModule } from 'ng2-charts';
+import { NgxTimelineModule } from 'ngx-timeline';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -122,7 +123,8 @@ import {MapService} from "../services/map.service";
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
-    ChartsModule
+    ChartsModule,
+    NgxTimelineModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
