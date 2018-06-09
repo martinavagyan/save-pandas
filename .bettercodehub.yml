@@ -3,7 +3,5 @@
 # - typescript
 # - javascript
 
-# exclude:
-# - /server/lib/.*
-
-.
+exclude:
+- /.*
