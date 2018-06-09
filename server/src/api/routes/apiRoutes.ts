@@ -2,11 +2,24 @@
 module.exports = (app: any, passport: any) => {
     const apiController = require('../controllers/apiController')(passport);
 
+    app.use((req: any, res: any, next: any) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+        res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
+        next();
+    });
+
     app.route('/').get(apiController.home_get);
     app.route('/api/login').post(apiController.jwt_login_post);
     app.route('/api/signup').post(apiController.signup_post);
     app.route('/api/logout').get(apiController.logout_get);
     app.route('/api/user/:userId').get(apiController.isJWTValid, apiController.get_user);
+
+    /**
+     * Iota stuff
+     * */
+    app.route('/api/transactions/').post(apiController.add_transaction);
+    app.route('/api/transactions/:numberOfTransactions').get(apiController.get_latest_transactions);
 
     /**
      * Testing routes
