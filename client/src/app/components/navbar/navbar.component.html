@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button mat-button [routerLink]="['/home']">Home</button>
   <button mat-button [routerLink]="['/projects']">Projects</button>
   <button mat-button [routerLink]="['/profile']">Profile</button>
+  <a routerLink="/home" (click)="logout()" class="btn btn-default btn-sm">Logout</a>
 </mat-toolbar>

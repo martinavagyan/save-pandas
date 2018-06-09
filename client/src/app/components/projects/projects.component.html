@@ -1,9 +1,9 @@
-<app-map-box></app-map-box>
+<app-map-box [hidden]="!isMapVisible" ></app-map-box>
 
 <mat-tab-group>
   <mat-tab label="Tab 1">
     <ng-template mat-tab-label>
-      <mat-icon>map</mat-icon>
+      <mat-icon (click)="showMap()">map</mat-icon>
       MAP
     </ng-template>
     <div>
@@ -11,7 +11,7 @@
   </mat-tab>
   <mat-tab label="Tab 2">
     <ng-template mat-tab-label>
-      <mat-icon>dashboard</mat-icon>
+      <mat-icon (click)="hideMap()">dashboard</mat-icon>
       PROJECTS
     </ng-template>
     <mat-grid-list cols="4" rowHeight="600px">

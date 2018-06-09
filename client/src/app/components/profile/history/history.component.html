@@ -2,7 +2,7 @@
 
 <ngx-timeline [events]="previousDonations">
   <ng-template let-event let-index="rowIndex" timelineHeader>
-    Donated {{event.donation}} to {{event.charityName}}
+    Donated {{event.donation}}€ to {{event.charityName}}
   </ng-template>
   <ng-template let-event let-index="rowIndex" timelineBody>
       ({{event.donationDate.getUTCDate()}}-{{event.donationDate.getUTCMonth() + 1}}-{{event.donationDate.getUTCFullYear()}})

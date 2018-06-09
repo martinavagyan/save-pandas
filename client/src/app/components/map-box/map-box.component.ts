@@ -41,7 +41,7 @@ export class MapBoxComponent implements OnInit {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [109.1896, 27.7315]
+      "coordinates": [18.5582, 4.3947]
     },
     "properties": {
       "icon-color": "#ff6383",
@@ -58,7 +58,7 @@ export class MapBoxComponent implements OnInit {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [18.5582, 4.3947]
+      "coordinates": [109.1896, 27.7315]
     },
     "properties": {
       "title": "C",
