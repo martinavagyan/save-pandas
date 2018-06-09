@@ -1,7 +1,7 @@
 import {Model} from 'mongoose';
 import * as testModel from '../models/testModel';
-import * as projectModel from '../models/projectModel';
 import {UserModule, IUserModel} from '../models/userModel';
+import * as projectModel from '../models/projectModel';
 
 import TestController from './testController';
 import UserController from './userController';
@@ -14,6 +14,7 @@ module.exports = (passport: any) => {
     const testCtrl = new TestController<Model<testModel.ITestModel>>(testModel.default);
     const userCtrl = new UserController<Model<IUserModel>>(UserModule);
     const projectCtrl = new ProjectController<Model<projectModel.IProjectModel>>(projectModel.default);
+
     const publicModule: any = {};
 
     publicModule.home_get = (req: any, res: any, next: any) => {
@@ -96,13 +97,17 @@ module.exports = (passport: any) => {
         userCtrl.get(req, res);
     };
 
+    /**
+     * projects callback functions
+     * */
+
     publicModule.projects_get = (req: any, res: any, next: any) => {
-        projectCtrl.getAll(req, res);
+      projectCtrl.getAll(req, res);
     };
 
-    publicModule.projects_post = (req: any, res: any, next: any) => {
+    publicModule.project_post = (req: any, res: any, next: any) => {
         projectCtrl.insert(req, res);
-    };
+      };
 
     /**
      * If doing a JWT validation use the follwoing before the api call
