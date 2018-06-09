@@ -1,0 +1,9 @@
+languages:
+- typescript
+
+exclude:
+- /server/lib/.*
+- /server/src/config/.*
+- /server/public/.*
+- /client/src/app/auth/.*
+- /client/src/app/components/map-box/.*

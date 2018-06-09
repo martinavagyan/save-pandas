@@ -8,14 +8,16 @@ import { ProfileComponent } from "./profile/profile.component";
 import { TestComponentComponent } from "./test-component/test-component.component";
 import { AuthGuard } from "../auth/auth.guard";
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/projects', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/:projectId', component: ProjectDetailComponent},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent },
   { path: 'test', component: TestComponentComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

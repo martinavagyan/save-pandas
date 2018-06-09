@@ -9,6 +9,10 @@ import UserController from './userController';
 import ProjectController from './projectController';
 import DonationController from './donationController';
 
+import * as channelModel from '../models/channelModel';
+import ChannelCtrl from './channelController';
+import IotaService from "../../services/iota-service";
+
 import * as path from 'path';
 import * as jwt from 'jsonwebtoken';
 
@@ -17,6 +21,9 @@ module.exports = (passport: any) => {
     const userCtrl = new UserController<Model<IUserModel>>(UserModule);
     const projectCtrl = new ProjectController<Model<projectModel.IProjectModel>>(projectModel.default);
     const donationCtrl = new DonationController<Model<donationModel.IDonationModel>>(donationModel.default);
+    const channelCtrl = new ChannelCtrl<Model<channelModel.IChannelModel>>(channelModel.default);
+
+    const iotaService = new IotaService();
 
     const publicModule: any = {};
 
@@ -98,6 +105,17 @@ module.exports = (passport: any) => {
 
     publicModule.get_user = (req: any, res: any, next: any) => {
         userCtrl.get(req, res);
+    };
+
+    publicModule.add_transaction = (req: any, res: any) => {
+        iotaService.attachMessage(req.body).then((root: any) => {
+            console.log("We got so far, ", root);
+            channelCtrl.insert(root, res);
+        });
+    };
+
+    publicModule.get_latest_transactions = (req: any, res: any) => {
+        channelCtrl.getLatest(iotaService, res, req);
     };
 
     /**

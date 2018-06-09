@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/BeyondBankingDays/save-the-pandas?branch=master&token=364fba2bbc19077589604d0edf4ef318b6a097f4)](https://bettercodehub.com/)
+
 # How to run locally
 
 Prerequisites

@@ -1,0 +1,13 @@
+
+#map {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  width: 80%;
+  height: 80%;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

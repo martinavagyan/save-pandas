@@ -1,6 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
-
 body {
   padding-top: 0;
   margin: 0;
+  background-color: #f9f9f9
+}
+
+.container{
+  width: 80%;
+}
+
+.mat-tab-label{
+ color: #0797a6;
+}
+
+#navigation {
+  /* background-color: rgb(255, 221, 90, 0.6); */
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.18);
+}
+
+#userSettings {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#map {
+  margin-top: 64px;
 }

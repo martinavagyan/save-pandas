@@ -19,8 +19,9 @@ import {AuthGuard} from "../auth/auth.guard";
 import {AuthInterceptor} from "../auth/auth-interceptor.service";
 import { StatisticsComponent } from './profile/statistics/statistics.component';
 import { HistoryComponent } from './profile/history/history.component';
-import { FeedbackComponent } from './profile/feedback/feedback.component';
 import { TweetsComponent } from './profile/tweets/tweets.component';
+import { ChartsModule } from 'ng2-charts';
+import { NgxTimelineModule } from 'ngx-timeline';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -35,6 +36,8 @@ import {
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
+import { MapBoxComponent } from './map-box/map-box.component';
+import {MapService} from "../services/map.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,11 +49,11 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     PageNotFoundComponent,
     StatisticsComponent,
     HistoryComponent,
-    FeedbackComponent,
     TweetsComponent,
     NavbarComponent,
     ProjectsComponent,
     ProjectDetailComponent,
+    MapBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,13 +121,16 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
+    ChartsModule,
+    NgxTimelineModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     RouterModule,
     ApiRequestsService,
     ConfigurationService,
-    AuthGuard
+    AuthGuard,
+    MapService,
   ],
   bootstrap: [AppComponent]
 })
