@@ -20,55 +20,6 @@ export class MapBoxComponent implements OnInit {
 
   public regions: Map<string, any> = new Map<string, any>();
 
-  private pointA: any = {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [2.3522, 48.8566]
-    },
-    "properties": {
-      "title": "A",
-      "icon": "circle",
-      "description": "<h4>Save the frogs in Bordeaux</h4>" +
-      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
-      "<h6>Over time endangered frogs became <br/> a center of delicate food.</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
-    }
-  };
-
-  private pointB: any = {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [18.5582, 4.3947]
-    },
-    "properties": {
-      "icon-color": "#ff6383",
-      "title": "B",
-      "icon": "circle",
-      "description": "<h4>Habitat in Uganda</h4>" +
-      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
-      "<h6>They also need to sleep somewhere.</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
-    }
-  };
-
-  private pointC: any = {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [109.1896, 27.7315]
-    },
-    "properties": {
-      "title": "C",
-      "icon": "circle",
-      "description": "<h4>Make the china reacher</h4>" +
-      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
-      "<h6>Yeah, well there are pandas to save</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
-    }
-  };
-
   private waterInAfrica: any = {
     "type": "Feature",
     "geometry": {
@@ -81,7 +32,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Water initiative in Saharan Africa</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=171\" alt=\"Italian Trulli\">" +
       "<h6>We need more water!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a routerLink = \"/projects/1\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -133,19 +84,68 @@ export class MapBoxComponent implements OnInit {
     }
   };
 
+  private preventingChildLabour: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [107.347139, 31.657328]
+    },
+    "properties": {
+      "title": "Preventing Child Labour",
+      "icon": "circle",
+      "description": "<h4>Donate for preventing child labour!</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?image=245\" alt=\"Italian Trulli\">" +
+      "<h6>We need to protect the children!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
+  private amazonRiverFlood: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-55.126648, -2.163106]
+    },
+    "properties": {
+      "title": "Amazon River Flood",
+      "icon": "circle",
+      "description": "<h4>Flood in the Amazon!</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
+      "<h6>Please help the restoration of the area!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
+  private cropsProject: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [ -6.266155, 53.350140]
+    },
+    "properties": {
+      "icon-color": "#ff6383",
+      "title": "Crops Restoration",
+      "icon": "circle",
+      "description": "<h4>Crops restoration project</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
+      "<h6>Numerous crops were destroyed by a horrible storm.</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
   constructor(private mapService: MapService,
               private differs: KeyValueDiffers) {
   }
 
   ngOnInit() {
     this.markers = this.mapService.getMarkers();
-    this.regions.set('A', this.pointA);
-    this.regions.set('B', this.pointB);
-    this.regions.set('C', this.pointC);
-    this.regions.set('D', this.waterInAfrica);
-    this.regions.set('E', this.schoolsInZimbabwe);
-    this.regions.set('F', this.schoolsInBangladesh);
-    this.regions.set('G', this.recyclingInSouthAsia);
+    this.regions.set('A', this.amazonRiverFlood);
+    this.regions.set('B', this.cropsProject);
+    this.regions.set('C', this.waterInAfrica);
+    this.regions.set('D', this.schoolsInZimbabwe);
+    this.regions.set('E', this.schoolsInBangladesh);
+    this.regions.set('F', this.recyclingInSouthAsia);
+    this.regions.set('G', this.preventingChildLabour);
     this.initializeMap();
   }
 
@@ -175,13 +175,13 @@ export class MapBoxComponent implements OnInit {
           "data": {
             "type": "FeatureCollection",
             "features": [
-              _this.pointA,
-              _this.pointB,
-              _this.pointC,
               _this.waterInAfrica,
               _this.schoolsInZimbabwe,
               _this.schoolsInBangladesh,
-              _this.recyclingInSouthAsia
+              _this.recyclingInSouthAsia,
+              _this.preventingChildLabour,
+              _this.amazonRiverFlood,
+              _this.cropsProject
             ]
           }
         },
