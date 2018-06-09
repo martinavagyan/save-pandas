@@ -1,5 +1,7 @@
 <div class="headline">
-  <img src="../../../../assets/DWB.jpg">
+  <video loop muted autoplay class="fullscreen-bg__video">
+    <source src="../../../../assets/986534446.mp4" type="video/mp4">
+  </video>
   <h1 class="bottom-left">{{project.name}}</h1>
 </div>
 <div class="container">
@@ -11,6 +13,11 @@
     </div>
     <div class="col-6 col-md-6">
       <h1>Total pledge: 100,000€</h1>
+      <mat-progress-bar mode="determinate" value="70" style="height: 20px; border-radius: 10px; margin-bottom: 30px;"></mat-progress-bar>
+      <mat-form-field class="example-full-width">
+        <input type="number" matInput placeholder="Amount in €">
+      </mat-form-field>
+      <button mat-fab style="background-color: green; color: white; height: 70px; width: 70px;">Donate</button>
       <ngx-timeline [events]="projectGoals">
         <ng-template let-event let-index="rowIndex" timelineHeader>
           <h5>{{event.milestoneName}}</h5>
@@ -20,27 +27,28 @@
       </ngx-timeline>
     </div>
   </div>
+  <hr>
   <div class="row">
-      <mat-grid-list cols="3" rowHeight="2:1">
-        <mat-grid-tile>
-          <mat-card>
-            <canvas baseChart [chartType]="'bar'" [datasets]="volunteersTrained">
-            </canvas>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card>
-            <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels">
-            </canvas>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card>
-            <canvas baseChart [chartType]="'bar'" [datasets]="pandasSaved">
-            </canvas>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-      <hr>
-    </div>
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'bar'" [datasets]="volunteersTrained">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'bar'" [datasets]="pandasSaved">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <hr>
+  </div>
 </div>
