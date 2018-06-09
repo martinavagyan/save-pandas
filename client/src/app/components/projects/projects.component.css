@@ -1,7 +1,7 @@
 .example-card {
-  border: 1px black solid;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 400px;
-  height: 580px;
+  height: 600px;
 }
 
 mat-card {

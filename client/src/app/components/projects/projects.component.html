@@ -13,17 +13,23 @@
       <mat-icon (click)="hideMap()">dashboard</mat-icon>
       PROJECTS
     </ng-template>
-    <mat-grid-list cols="4" rowHeight="600px">
+    <mat-grid-list cols="4" rowHeight="450px">
       <mat-grid-tile routerLink="{{p.id}}" *ngFor="let p of sampleProjects">
         <mat-card class="example-card fade">
+          <img mat-card-image [src]="p.image_url">
           <mat-card-header>
             <mat-card-title><h3>{{p.title}}</h3></mat-card-title>
             <mat-card-subtitle>{{p.subtitle}}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image [src]="p.image_url">
           <mat-card-content>
             <p>{{p.short_description}}</p>
           </mat-card-content>
+          <mat-card-actions>
+            <button mat-icon-button>
+              <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+            </button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
