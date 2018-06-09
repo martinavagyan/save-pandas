@@ -94,6 +94,11 @@ module.exports = (passport: any) => {
         userCtrl.get(req, res);
     };
 
+    publicModule.projects_get = (req: any, res: any, next: any) => {
+        
+    };
+
+
     /**
      * If doing a JWT validation use the follwoing before the api call
      * */

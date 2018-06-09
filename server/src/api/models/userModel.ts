@@ -4,8 +4,11 @@ import * as bcrypt from 'bcrypt-nodejs';
 
 export interface IUser {
     local: {
+        name: string,
         email: string,
         password: string,
+        projectId: string,
+        socialImapct: [any],
     };
     facebook: {
         id: string,
@@ -29,8 +32,12 @@ export interface IUser {
 
 const UserSchema: Schema = new Schema({
     local: {
+        name: String,
         email: String,
         password: String,
+        projectId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Project'}],
+        socialImapct: [String],
+
     },
     facebook: {
         id: String,
