@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^6.0.4",
     "@angular/platform-browser-dynamic": "^6.0.4",
     "@angular/router": "^6.0.4",
+    "@types/mapbox-gl": "^0.45.0",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.7",
     "jasmine": "^3.1.0",

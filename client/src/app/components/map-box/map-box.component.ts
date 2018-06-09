@@ -1,5 +1,5 @@
 import {Component, Input, KeyValueDiffers, OnInit} from '@angular/core';
-import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
+import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl';
 
 import {MapService} from '../../services/map.service';
 import {GeoJson, FeatureCollection} from '../map';
@@ -30,7 +30,10 @@ export class MapBoxComponent implements OnInit {
     "properties": {
       "title": "A",
       "icon": "circle",
-      "description": "<strong>Quick overview of the region</strong><p>p>",
+      "description": "<h4>Save the frogs in Bordeaux</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
+      "<h6>Over time endangered frogs became <br/> a center of delicate food.</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
     }
   };
 
@@ -44,7 +47,10 @@ export class MapBoxComponent implements OnInit {
       "icon-color": "#ff6383",
       "title": "B",
       "icon": "circle",
-      "description": "<strong>Quick overview of the region</strong><p>p>",
+      "description": "<h4>Habitat in Uganda</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
+      "<h6>They also need to sleep somewhere.</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
     }
   };
 
@@ -57,7 +63,10 @@ export class MapBoxComponent implements OnInit {
     "properties": {
       "title": "C",
       "icon": "circle",
-      "description": "<strong>Quick overview of the region</strong><p>p>",
+      "description": "<h4>Make the china reacher</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
+      "<h6>Yeah, well there are pandas to save</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
     }
   };
 
