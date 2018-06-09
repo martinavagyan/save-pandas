@@ -12,7 +12,16 @@ body {
  color: rgb(0, 16, 255, 0.87)
 }
 
-.mat-toolbar {
-  background-color: rgb(255, 221, 90, 0.6);
-  border-bottom: 1px solid black;
+#navigation {
+  /* background-color: rgb(255, 221, 90, 0.6); */
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.18);
+}
+
+#userSettings {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#map {
+  margin-top: 64px;
 }

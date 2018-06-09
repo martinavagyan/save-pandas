@@ -1,5 +1,21 @@
 <mat-toolbar>
-  <button mat-button [routerLink]="['/projects']">Projects</button>
-  <button mat-button [routerLink]="['/profile']">Profile</button>
-  <a routerLink="/home" (click)="logout()" class="btn btn-default btn-sm">Logout</a>
+  Casper Hub
+  <div id="userSettings">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+      <button mat-menu-item routerLink="/home" (click)="logout()">Logout</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <i class="material-icons">settings</i>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-toolbar id="navigation">
+  <button mat-button [routerLink]="['/projects']"><i class="material-icons">
+      public
+      </i> Projects</button>
+  <button mat-button [routerLink]="['/profile']"><i class="material-icons">
+      person
+      </i> Profile</button>
 </mat-toolbar>
