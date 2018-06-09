@@ -1,6 +1,6 @@
 <div class="headline">
   <img src="https://www.doctorswithoutborders.org/sites/usa/files/styles/detail_page_header_left_sidebar/http/media.msf.org/Docs/MSF/Media/TR1/1/f/8/d/MSF114004.jpg">
-  <h1 class="bottom-left">{{project.name}}</h1>
+  <h1 class="bottom-left">{{project.title}}</h1>
 </div>
 <p>{{project.shortDescription}}</p>
 <mat-divider></mat-divider>
@@ -8,21 +8,20 @@
   <div class="col-6 col-md-6">
     <p align="justify">{{project.fullDescription}}</p>
   </div>
-  <div class="col-6 col-md-6">Fookin timeline</div>
+  <div class="col-6 col-md-6">
+    <h1>Total pledge: 100,000€</h1>
+    <ngx-timeline [events]="projectGoals">
+      <ng-template let-event let-index="rowIndex" timelineHeader>
+      {{event.charityName}}
+      </ng-template>
+      
+    </ngx-timeline>
+  </div>
 </div>
 <div class="row">
-  <mat-grid-list cols="3" rowHeight="2:1">
-    <h4>Total Spent: {{moneyDonated}}€</h4>
-    <mat-grid-tile>
-      <canvas baseChart [chartType]="'bar'" [datasets]="volunteersTrained">
-      </canvas>
-    </mat-grid-tile>
+  <mat-grid-list cols="1" rowHeight="2:1">
     <mat-grid-tile>
       <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels">
-      </canvas>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <canvas baseChart [chartType]="'bar'" [datasets]="pandasSaved">
       </canvas>
     </mat-grid-tile>
   </mat-grid-list>
