@@ -9,8 +9,8 @@ export interface IDonation {
 const DonationSchema: Schema = new Schema({
     amount: Number,
     createdAt: Date,
-    UserId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    projectId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Project'}],
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    projectId: {type: mongoose.Schema.Types.ObjectId, ref: 'Project'},
 });
 
 export interface IDonationModel extends IDonation, Document {

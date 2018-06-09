@@ -2,10 +2,12 @@ import {Model} from 'mongoose';
 import * as testModel from '../models/testModel';
 import {UserModule, IUserModel} from '../models/userModel';
 import * as projectModel from '../models/projectModel';
+import * as donationModel from '../models/donationModel';
 
 import TestController from './testController';
 import UserController from './userController';
 import ProjectController from './projectController';
+import DonationController from './donationController';
 
 import * as path from 'path';
 import * as jwt from 'jsonwebtoken';
@@ -14,6 +16,7 @@ module.exports = (passport: any) => {
     const testCtrl = new TestController<Model<testModel.ITestModel>>(testModel.default);
     const userCtrl = new UserController<Model<IUserModel>>(UserModule);
     const projectCtrl = new ProjectController<Model<projectModel.IProjectModel>>(projectModel.default);
+    const donationCtrl = new DonationController<Model<donationModel.IDonationModel>>(donationModel.default);
 
     const publicModule: any = {};
 
@@ -108,6 +111,18 @@ module.exports = (passport: any) => {
     publicModule.project_post = (req: any, res: any, next: any) => {
         projectCtrl.insert(req, res);
       };
+
+    /**
+     * donations callback functions
+     * */
+
+    publicModule.donations_get = (req: any, res: any, next: any) => {
+        donationCtrl.getAll(req, res);
+    };
+
+    publicModule.donation_post = (req: any, res: any, next: any) => {
+        donationCtrl.insert(req, res);
+    };
 
     /**
      * If doing a JWT validation use the follwoing before the api call

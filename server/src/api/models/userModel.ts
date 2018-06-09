@@ -35,7 +35,6 @@ const UserSchema: Schema = new Schema({
         name: String,
         email: String,
         password: String,
-        projectId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Project'}],
         socialImapct: [String],
 
     },

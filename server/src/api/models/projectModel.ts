@@ -22,7 +22,6 @@ export interface IProject {
         }
     ];
     bankAccount: string;
-
 }
 
 const ProjectSchema: Schema = new Schema({
@@ -44,7 +43,7 @@ const ProjectSchema: Schema = new Schema({
         },
     ],
     bankAccount: String,
-    UserId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    userId: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
 });
 
 export interface IProjectModel extends IProject, Document {
