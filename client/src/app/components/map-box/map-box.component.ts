@@ -10,7 +10,6 @@ import {GeoJson, FeatureCollection} from '../map';
   styleUrls: ['./map-box.component.css']
 })
 export class MapBoxComponent implements OnInit {
-
   public map: mapboxgl.Map;
   public style = 'mapbox://styles/martinavagyan/cjfpesatd0o0m2rnyn96kt044';
   public lat = 40.0691;
@@ -70,6 +69,70 @@ export class MapBoxComponent implements OnInit {
     }
   };
 
+  private waterInAfrica: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [30.200108, 19.780782]
+    },
+    "properties": {
+      "title": "Water In Africa",
+      "icon": "circle",
+      "description": "<h4>Water initiative in Saharan Africa</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?image=171\" alt=\"Italian Trulli\">" +
+      "<h6>We need more water!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
+  private schoolsInZimbabwe: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [19.0154, 29.1549]
+    },
+    "properties": {
+      "title": "Schools in Zimbabwe",
+      "icon": "circle",
+      "description": "<h4>Schools in Zimbabwe!</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?image=3\" alt=\"Italian Trulli\">" +
+      "<h6>There is a serious lack of schools in the region of Zimbabwe!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
+  private schoolsInBangladesh: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [90.3563, 23.6850]
+    },
+    "properties": {
+      "title": "Schools in Bangladesh",
+      "icon": "circle",
+      "description": "<h4>Schools in Bangladesh!</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?image=3\" alt=\"Italian Trulli\">" +
+      "<h6>We need a secondary school!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
+  private recyclingInSouthAsia: any = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [105.325654, 11.914890]
+    },
+    "properties": {
+      "title": "Recycling Project",
+      "icon": "circle",
+      "description": "<h4>Developing the recycling in South Asia!</h4>" +
+      "<img src=\"https://picsum.photos/200/150/?image=56\" alt=\"Italian Trulli\">" +
+      "<h6>We need better recycling!</h6>" +
+      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+    }
+  };
+
   constructor(private mapService: MapService,
               private differs: KeyValueDiffers) {
   }
@@ -79,6 +142,10 @@ export class MapBoxComponent implements OnInit {
     this.regions.set('A', this.pointA);
     this.regions.set('B', this.pointB);
     this.regions.set('C', this.pointC);
+    this.regions.set('D', this.waterInAfrica);
+    this.regions.set('E', this.schoolsInZimbabwe);
+    this.regions.set('F', this.schoolsInBangladesh);
+    this.regions.set('G', this.recyclingInSouthAsia);
     this.initializeMap();
   }
 
@@ -111,6 +178,10 @@ export class MapBoxComponent implements OnInit {
               _this.pointA,
               _this.pointB,
               _this.pointC,
+              _this.waterInAfrica,
+              _this.schoolsInZimbabwe,
+              _this.schoolsInBangladesh,
+              _this.recyclingInSouthAsia
             ]
           }
         },
