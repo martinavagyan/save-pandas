@@ -1,5 +1,6 @@
 <div class="headline">
-  <img src="https://www.doctorswithoutborders.org/sites/usa/files/styles/detail_page_header_left_sidebar/http/media.msf.org/Docs/MSF/Media/TR1/1/f/8/d/MSF114004.jpg">
+  <img
+    src="https://www.doctorswithoutborders.org/sites/usa/files/styles/detail_page_header_left_sidebar/http/media.msf.org/Docs/MSF/Media/TR1/1/f/8/d/MSF114004.jpg">
   <h1 class="bottom-left">{{project.title}}</h1>
 </div>
 <p>{{project.shortDescription}}</p>
@@ -12,9 +13,11 @@
     <h1>Total pledge: 100,000€</h1>
     <ngx-timeline [events]="projectGoals">
       <ng-template let-event let-index="rowIndex" timelineHeader>
-      {{event.charityName}}
+        <h5>{{event.milestoneName}}</h5>
+        <br>
+        <h6>{{event.location}} {{event.timestamp}}</h6>
       </ng-template>
-      
+
     </ngx-timeline>
   </div>
 </div>
