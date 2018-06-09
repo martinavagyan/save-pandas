@@ -3,4 +3,5 @@ languages:
 
 exclude:
 - /server/lib/.*
+- /server/src/config/.*
 - /server/public/.*
