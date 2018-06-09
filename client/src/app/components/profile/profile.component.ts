@@ -8,7 +8,7 @@ import {AuthService} from "../../auth/auth.service";
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  public isMapVisible: Boolean = false;
   public testEntries: any = [];
   public userData: any = {};
 
@@ -24,6 +24,14 @@ export class ProfileComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+  }
+
+  public showMap(): void {
+    this.isMapVisible = true;
+  }
+
+  public hideMap(): void {
+    this.isMapVisible = false;
   }
 
   public getTests(): void {
