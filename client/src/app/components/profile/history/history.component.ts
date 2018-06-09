@@ -20,7 +20,7 @@ export class HistoryComponent {
     {
       donationDate: new Date(2018, 3, 14),
       donation: 500,
-      charityName: 'Save the Humans',
+      charityName: 'Development in Sierra Leone',
       projectId: 2
     }
   ];
