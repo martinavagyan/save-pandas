@@ -1,4 +1,21 @@
 .example-card {
-    border: 1px black solid;
-    max-width: 400px;
+  border: 1px black solid;
+  max-width: 400px;
+  height: 580px;
+}
+
+mat-card {
+  margin: 10px;
+}
+
+mat-card-header {
+  height: 100px;
+}
+
+mat-card-content {
+  height: 180px;
+}
+
+mat-card-actions {
+  height: 220px;
 }
