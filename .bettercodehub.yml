@@ -1,7 +1,5 @@
-component_depth: 2
-# languages:
-# - typescript
-# - javascript
+languages:
+- typescript
 
 exclude:
 - /server/lib/.*
