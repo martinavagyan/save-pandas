@@ -3,26 +3,32 @@
 <mat-grid-list cols="3" rowHeight="2:1">
   <h4>Total Spent: €{{moneyDonated}}</h4>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'bar'"
-      [datasets]="volunteersTrained">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="volunteersTrained">
+      </canvas>
+    </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'doughnut'"
-      [data]="resourcesGathered"
-      [labels]="resourcesGatheredLabels">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'doughnut'"
+        [data]="resourcesGathered"
+        [labels]="resourcesGatheredLabels">
+      </canvas>
+    </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'bar'"
-      [datasets]="pandasSaved">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="pandasSaved">
+      </canvas>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 <hr>
