@@ -19,7 +19,6 @@ import {AuthGuard} from "../auth/auth.guard";
 import {AuthInterceptor} from "../auth/auth-interceptor.service";
 import { StatisticsComponent } from './profile/statistics/statistics.component';
 import { HistoryComponent } from './profile/history/history.component';
-import { FeedbackComponent } from './profile/feedback/feedback.component';
 import { TweetsComponent } from './profile/tweets/tweets.component';
 import { ChartsModule } from 'ng2-charts';
 import { NgxTimelineModule } from 'ngx-timeline';
@@ -50,7 +49,6 @@ import {MapService} from "../services/map.service";
     PageNotFoundComponent,
     StatisticsComponent,
     HistoryComponent,
-    FeedbackComponent,
     TweetsComponent,
     NavbarComponent,
     ProjectsComponent,
