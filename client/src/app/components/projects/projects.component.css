@@ -1,19 +1,25 @@
 .example-card {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 400px;
-  height: 600px;
 }
 
 mat-card {
   margin: 10px;
+  height: 550px;
+  position: relative;
 }
 
-mat-card-header {
-  height: 100px;
+mat-grid-tile {
+  margin: 10px;
 }
 
-mat-card-content {
-  height: 180px;
+mat-grid-list {
+  overflow: hidden;
+}
+
+mat-card-footer{
+  position: absolute;
+  bottom: 30px;
 }
 
 .fade {
@@ -31,4 +37,5 @@ mat-card-content {
 }
 
 /* 255, 221, 90 yellow */
+
 /* 0, 16, 255, 0.40 blue */
