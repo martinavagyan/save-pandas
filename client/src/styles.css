@@ -1,8 +1,18 @@
 body {
   padding-top: 0;
   margin: 0;
+  background-color: #f9f9f9
 }
 
 .container{
   width: 80%;
+}
+
+.mat-tab-label{
+ color: rgb(0, 16, 255, 0.87)
+}
+
+.mat-toolbar {
+  background-color: rgb(255, 221, 90, 0.6);
+  border-bottom: 1px solid black;
 }

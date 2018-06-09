@@ -18,14 +18,17 @@ mat-card-content {
 
 .fade {
   opacity: 1;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity 5s ease-in-out;
+  -moz-transition: opacity 5s ease-in-out;
+  -webkit-transition: opacity 5s ease-in-out;
 }
 
 .fade:hover {
   opacity: 0.9;
-  background: rgb(116, 212, 241);
+  background: rgb(255, 221, 90, 0.40);
   /* color: white; */
   cursor: pointer;
 }
+
+/* 255, 221, 90 yellow */
+/* 0, 16, 255, 0.40 blue */

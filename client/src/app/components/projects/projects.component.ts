@@ -56,27 +56,6 @@ export class ProjectsComponent implements OnInit {
     "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
     "full_description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; ",
     "image_url": "http://dummyimage.com/400x300.png/dddddd/000000"
-  }, {
-    "id": 8,
-    "title": "Christmas on Mars",
-    "subtitle": "Coty US LLC",
-    "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
-    "full_description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
-    "image_url": "http://dummyimage.com/400x300.png/cc0000/ffffff"
-  }, {
-    "id": 9,
-    "title": "Mother and Child",
-    "subtitle": "Newton Laboratories, Inc.",
-    "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
-    "full_description": "Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-    "image_url": "http://dummyimage.com/400x300.png/cc0000/ffffff"
-  }, {
-    "id": 10,
-    "title": "Hysteria: The Def Leppard Story",
-    "subtitle": "REMEDYREPACK INC.",
-    "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
-    "full_description": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "image_url": "http://dummyimage.com/400x300.png/5fa2dd/ffffff"
   }];
 
   constructor() { }
