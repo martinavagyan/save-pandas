@@ -4,22 +4,15 @@
   </div>
   <h3>Below you'll find information regarding your social impact portfolio</h3>
 
-  <!-- <div class="row"> -->
-  <!-- LOCAL INFORMATION -->
-  <!-- <div class="col-sm-6"> -->
-  <!-- <div class="well"> -->
-  <!-- <h3><span class="fa fa-user"></span> Local</h3> -->
-  <!-- <p> -->
-  <!-- <strong>id</strong> {{userData.id}}<br> -->
-  <!-- <strong>email</strong> {{userData.email}}<br> -->
-  <!-- </p> -->
-  <!-- </div> -->
-  <!-- </div> -->
-  <!-- </div> -->
-  <!-- <app-test-component></app-test-component> -->
   <app-statistics></app-statistics>
   <app-history></app-history>
-  <app-feedback></app-feedback>
-  <app-tweets></app-tweets>
 
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <app-feedback></app-feedback>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-tweets></app-tweets>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
