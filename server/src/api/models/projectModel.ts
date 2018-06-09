@@ -50,6 +50,6 @@ const ProjectSchema: Schema = new Schema({
 export interface IProjectModel extends IProject, Document {
 }
 
-const ProjectModel = mongoose.model<IProjectModel>('Test', ProjectSchema);
+const ProjectModel = mongoose.model<IProjectModel>('Project', ProjectSchema);
 
 export default ProjectModel;

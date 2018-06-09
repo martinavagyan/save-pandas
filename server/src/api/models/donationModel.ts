@@ -16,6 +16,6 @@ const DonationSchema: Schema = new Schema({
 export interface IDonationModel extends IDonation, Document {
 }
 
-const DonationModel = mongoose.model<IDonationModel>('Test', DonationSchema);
+const DonationModel = mongoose.model<IDonationModel>('Donation', DonationSchema);
 
 export default DonationModel;
