@@ -18,33 +18,9 @@ export class ProjectDetailComponent implements OnInit {
   };
   public resourcesGathered: Number[] = [20, 30, 50];
   public resourcesGatheredLabels = ['Water (%)', 'Training (%)', 'Medicine (%)'];
-  public volunteersTrained: Object[] = [{data: [250], label: 'Volunteers Trained'}];
-  public pandasSaved: Object[] = [ { data: [34], label: 'Pandas Saved' }, { data: [250], label: 'Water' } ];
-  public projectGoals: Array<Transaction> =null;
-  public loadingDone: boolean = false;
-    // [
-    //   {
-    //     milestoneName: "Vaccinate 3000 children by end of year",
-    //     timestamp: new Date(2018, 3, 14),
-    //     location: "Kinshasa, Congo",
-    //     donation: 1000,
-    //     milestoneId: 1,
-    //   },
-    //   {
-    //     milestoneName: "Educate 200 nurses the end of first quarter",
-    //     timestamp: new Date(2018, 3, 14),
-    //     location: "Bukavu, Congo",
-    //     donation: 1000,
-    //     milestoneId: 1,
-    //   },
-    //   {
-    //     milestoneName: "Deploy team of 8 volunteers to impacted areas",
-    //     timestamp: new Date(2018, 6, 1),
-    //     location: "Kisangani, Congo",
-    //     donation: 1000,
-    //     milestoneId: 1,
-    //   },
-    // ];
+  public volunteersTrained: Object[] = [{data: [250], label: 'Volunteer training'}, { data: [250], label: 'Medicine' }, ];
+  public pandasSaved: Object[] = [ { data: [34], label: 'Field hospitals' }, { data: [250], label: 'L of water' }, { data: [40], label: 'Trucks with medicine' },  ];
+  public projectGoals: Array<Transaction> = null;
 
   public constructor(private route: ActivatedRoute,
                      private transactionService: TransactionService) {

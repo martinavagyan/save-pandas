@@ -24,14 +24,14 @@ export class MapBoxComponent implements OnInit {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [30.200108, 19.780782]
+      "coordinates": [14.8965794, -0.6605788]
     },
     "properties": {
       "title": "Ebola outbreak in DRC",
       "icon": "circle",
       "description": "<h4>Ebola outbreak in DRC</h4>" +
       "<img src=\"../../../assets/DWB1.jpg\" alt=\"Italian Trulli\">" +
-      "<h6>We need more water!</h6>" +
+      "<h6>We need more resources!</h6>" +
       "<a href =\"/projects/1\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
@@ -43,11 +43,11 @@ export class MapBoxComponent implements OnInit {
       "coordinates": [19.0154, 29.1549]
     },
     "properties": {
-      "title": "Schools in Zimbabwe",
+      "title": "Schools in Libya",
       "icon": "circle",
-      "description": "<h4>Schools in Zimbabwe!</h4>" +
+      "description": "<h4>Schools in Libya!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=3\" alt=\"Italian Trulli\">" +
-      "<h6>There is a serious lack of schools in the region of Zimbabwe!</h6>" +
+      "<h6>There is a serious lack of schools in the region of Libya!</h6>" +
       "<a href =\"/projects/6\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };

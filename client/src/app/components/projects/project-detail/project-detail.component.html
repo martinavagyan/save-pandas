@@ -12,12 +12,13 @@
       <p align="justify">{{project.fullDescription}}</p>
     </div>
     <div class="col-6 col-md-6">
-      <h1>Total pledge: 100,000€</h1>
-      <mat-progress-bar mode="determinate" value="70" style="height: 20px; border-radius: 10px; margin-bottom: 30px;"></mat-progress-bar>
+      <h1>Total pledge: 1,000,000€</h1>
+      <mat-progress-bar matTooltip="700,000€ raised!" mode="determinate" value="70" style="height: 20px; border-radius: 10px; margin-bottom: 30px;"></mat-progress-bar>
       <mat-form-field class="example-full-width">
         <input type="number" matInput placeholder="Amount in €">
       </mat-form-field>
       <button mat-fab style="background-color: green; color: white; height: 70px; width: 70px;">Donate</button>
+          <h2>Goals:</h2>
       <ngx-timeline [events]="projectGoals">
         <ng-template let-event let-index="rowIndex" timelineHeader>
           <h5>{{event.milestoneName}}</h5>
