@@ -21,6 +21,7 @@ export class ProjectDetailComponent implements OnInit {
   public volunteersTrained: Object[] = [{data: [250], label: 'Volunteers Trained'}];
   public pandasSaved: Object[] = [ { data: [34], label: 'Pandas Saved' }, { data: [250], label: 'Water' } ];
   public projectGoals: Array<Transaction> =null;
+  public loadingDone: boolean = false;
     // [
     //   {
     //     milestoneName: "Vaccinate 3000 children by end of year",
@@ -53,10 +54,12 @@ export class ProjectDetailComponent implements OnInit {
     // this.transactionService.addTransaction(this.projectGoals[0]).subscribe();
     // this.transactionService.addTransaction(this.projectGoals[1]).subscribe();
     // this.transactionService.addTransaction(this.projectGoals[2]).subscribe();
+    this.loadingDone = false;
 
     this.transactionService.getLatestNTransactions(5).subscribe((result) => {
       console.log(result);
       this.projectGoals = result;
+      this.loadingDone = true;
     });
   }
 
