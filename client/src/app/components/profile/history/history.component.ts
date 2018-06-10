@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+
+import {MapService} from '../../../services/map.service';
+import {GeoJson, FeatureCollection} from '../../map';
 
 @Component({
   selector: 'app-history',
@@ -10,20 +14,14 @@ export class HistoryComponent {
     {
       donationDate: new Date(2017, 11, 30),
       donation: 1000,
-      charityName: 'Panda\'s without Borders',
+      charityName: 'Ebola outbreak in DRC',
       projectId: 1
     },
     {
       donationDate: new Date(2018, 3, 14),
       donation: 500,
-      charityName: 'Save the Humans',
+      charityName: 'Development in Sierra Leone',
       projectId: 2
-    },
-    {
-      donationDate: new Date(2018, 6, 1),
-      donation: 250,
-      charityName: 'Get Martin some sleep',
-      projectId: 3
-    },
+    }
   ];
 }

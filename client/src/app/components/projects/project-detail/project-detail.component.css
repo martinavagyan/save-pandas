@@ -1,8 +1,7 @@
 .headline {
-  margin-top: 50px;
   position: relative;
   overflow: hidden;
-  max-height: 300px;
+  height: 600px;
 }
 
 .headline::after {
@@ -14,31 +13,61 @@
   width: 100%;
   content: '';
 }
+
 .headline img {
   min-width: 100%;
 }
 
 .bottom-left {
   position: absolute;
-  bottom: 8px;
-  left: 0px;
+  bottom: 0px;
+  margin: 0 auto;
   color: white
 }
 
-h1{
+.container p {
+  margin-top: 20px;
+}
+
+h1 {
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 800;
   z-index: 2;
   margin: 20px;
-  font-family: 'Raleway',sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: #0797a6;
 }
+
 p {
   font-size: 16px;
-
-font-family: 'Raleway',sans-serif; font-weight: 500; line-height: 32px; margin: 0 0 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 0 24px;
 }
 
-a { color: #c8c8c8; text-decoration: underline; }
+a {
+  color: #c8c8c8;
+  text-decoration: underline;
+}
 
+a:hover {
+  color: #1c1c1c;
+  text-decoration: underline;
+}
 
-a:hover { color: #1c1c1c; text-decoration: underline; }
+.fullscreen-bg__video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.iota-logo {
+  width: 100px;
+  display: inline-block;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}

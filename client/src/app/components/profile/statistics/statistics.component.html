@@ -1,28 +1,49 @@
 <h1>Statistics</h1>
 
-<mat-grid-list cols="3" rowHeight="2:1">
+<mat-grid-list cols="3" rowHeight="1:1">
   <h4>Total Spent: €{{moneyDonated}}</h4>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'bar'"
-      [datasets]="volunteersTrained">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="volunteersTrained">
+      </canvas>
+      <h4>Surge in vaccinations</h4>
+      <p>
+        We have been able to train over 200 volunteers, who have helped vaccinate more than 500 children.
+      </p>
+      <a href="#">View more</a>
+    </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'doughnut'"
-      [data]="resourcesGathered"
-      [labels]="resourcesGatheredLabels">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'doughnut'"
+        [data]="resourcesGathered"
+        [labels]="resourcesGatheredLabels">
+      </canvas>
+      <h4>Resource breakdown</h4>
+      <p>
+        With the money you've donated we've been successful in distrbuting the donations to the following areas.
+      </p>
+      <a href="#">View more</a>
+    </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <canvas
-      baseChart
-      [chartType]="'bar'"
-      [datasets]="pandasSaved">
-    </canvas>
+    <mat-card>
+      <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="pandasSaved">
+      </canvas>
+      <h4>You've helped more than just people!</h4>
+      <p>
+        You've helped not only in saving lives, but developing them for the future too!
+      </p>
+      <a href="#">View more</a>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 <hr>

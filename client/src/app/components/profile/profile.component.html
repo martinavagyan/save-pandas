@@ -1,10 +1,31 @@
-<div id="profile-wrapper">
-  <div class="page-header text-center">
-    <h1>Hello, Dave!</h1>
-  </div>
-  <h3>Below you'll find information regarding your social impact portfolio</h3>
+<div class="container">
+  <div id="profile-wrapper">
+    <div class="page-header text-center">
+      <h1>Hello, Dave!</h1>
+    </div>
+    <h3>Below you'll find information regarding your social impact portfolio</h3>
 
-  <app-statistics></app-statistics>
-  <app-history></app-history>
-  <app-tweets></app-tweets>
+    <app-statistics></app-statistics>
+
+    <mat-grid-list cols="2" rowHeight="6:1">
+      <mat-grid-tile>
+        <h1>Social Impact</h1>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <h1>Donation History</h1>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <app-social-impact-map></app-social-impact-map>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-history></app-history>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+    <hr>
+    <app-tweets></app-tweets>
+  </div>
 </div>

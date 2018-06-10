@@ -1,11 +1,7 @@
 export interface Transaction {
-  region: string;
-  type: string;
-  good: Good;
+  milestoneName: string;
   timestamp: Date;
-}
-
-export interface Good {
-  name: string;
-  quantity: number;
+  location: string;
+  donation: number;
+  milestoneId: number
 }

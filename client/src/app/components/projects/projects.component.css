@@ -31,7 +31,7 @@ mat-card-footer{
 
 .fade:hover {
   opacity: 0.9;
-  background: rgb(255, 221, 90, 0.40);
+  background: rgba(7, 151, 166, 0.3);
   /* color: white; */
   cursor: pointer;
 }

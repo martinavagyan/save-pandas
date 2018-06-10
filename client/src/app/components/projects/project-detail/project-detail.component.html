@@ -1,28 +1,69 @@
 <div class="headline">
-  <img src="https://www.doctorswithoutborders.org/sites/usa/files/styles/detail_page_header_left_sidebar/http/media.msf.org/Docs/MSF/Media/TR1/1/f/8/d/MSF114004.jpg">
-  <h1 class="bottom-left">{{project.title}}</h1>
+  <video loop muted autoplay class="fullscreen-bg__video">
+    <source src="../../../../assets/986534446.mp4" type="video/mp4">
+  </video>
+  <h1 class="bottom-left">{{project.name}}</h1>
 </div>
-<p>{{project.shortDescription}}</p>
-<mat-divider></mat-divider>
-<div class="row">
-  <div class="col-6 col-md-6">
-    <p align="justify">{{project.fullDescription}}</p>
+<div class="container">
+  <p>{{project.shortDescription}}</p>
+  <mat-divider></mat-divider>
+  <div class="row">
+    <div class="col-6 col-md-6">
+      <p align="justify">{{project.fullDescription}}</p>
+    </div>
+    <div class="col-6 col-md-6">
+      <h1>Total pledge: 1,000,000€</h1>
+      <mat-progress-bar matTooltip="700,000€ raised!" mode="determinate" value="70" style="height: 20px; border-radius: 10px; margin-bottom: 30px;"></mat-progress-bar>
+      <mat-form-field class="example-full-width">
+        <input type="number" matInput placeholder="Amount in €">
+      </mat-form-field>
+      <button mat-fab style="background-color: green; color: white; height: 70px; width: 70px;">Donate</button>
+      <ng-container *ngIf="isLoadingDone">
+        <h2>Project goals:</h2>
+        <ngx-timeline [events]="projectGoals">
+          <ng-template let-event let-index="rowIndex" timelineHeader>
+            <h5>{{event.milestoneName}}</h5>
+            <br>
+            <h6>{{event.location}} {{event.timestamp}}</h6>
+          </ng-template>
+        </ngx-timeline>
+      </ng-container>
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12"> -->
+
+            <div class="col align-self-center" *ngIf="!isLoadingDone">
+              <h2>Loading Tangle</h2>
+              <img class="iota-logo" [src]="iotaUrl">
+              <mat-spinner></mat-spinner>
+            <!-- </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
   </div>
-  <div class="col-6 col-md-6">
-    <h1>Total pledge: 100,000€</h1>
-    <ngx-timeline [events]="projectGoals">
-      <ng-template let-event let-index="rowIndex" timelineHeader>
-      {{event.charityName}}
-      </ng-template>
-      
-    </ngx-timeline>
+  <hr>
+  <div class="row">
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'bar'" [datasets]="volunteersTrained">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+          <canvas baseChart [chartType]="'bar'" [datasets]="pandasSaved">
+          </canvas>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <hr>
   </div>
-</div>
-<div class="row">
-  <mat-grid-list cols="1" rowHeight="2:1">
-    <mat-grid-tile>
-      <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels">
-      </canvas>
-    </mat-grid-tile>
-  </mat-grid-list>
 </div>

@@ -38,6 +38,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { MapBoxComponent } from './map-box/map-box.component';
 import {MapService} from "../services/map.service";
+import {TransactionService} from "../services/transaction.service";
+import { SocialImpactMapComponent } from './profile/social-impact-map/social-impact-map.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +56,7 @@ import {MapService} from "../services/map.service";
     ProjectsComponent,
     ProjectDetailComponent,
     MapBoxComponent,
+    SocialImpactMapComponent,
   ],
   imports: [
     BrowserModule,
@@ -131,6 +134,7 @@ import {MapService} from "../services/map.service";
     ConfigurationService,
     AuthGuard,
     MapService,
+    TransactionService,
   ],
   bootstrap: [AppComponent]
 })

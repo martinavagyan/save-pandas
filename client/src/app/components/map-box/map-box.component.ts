@@ -24,15 +24,15 @@ export class MapBoxComponent implements OnInit {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [30.200108, 19.780782]
+      "coordinates": [14.8965794, -0.6605788]
     },
     "properties": {
-      "title": "Water In Africa",
+      "title": "Ebola outbreak in DRC",
       "icon": "circle",
-      "description": "<h4>Water initiative in Saharan Africa</h4>" +
-      "<img src=\"https://picsum.photos/200/150/?image=171\" alt=\"Italian Trulli\">" +
-      "<h6>We need more water!</h6>" +
-      "<a routerLink = \"/projects/1\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
+      "description": "<h4>Ebola outbreak in DRC</h4>" +
+      "<img src=\"../../../assets/DWB1.jpg\" alt=\"Italian Trulli\">" +
+      "<h6>We need more resources!</h6>" +
+      "<a href =\"/projects/1\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -43,12 +43,12 @@ export class MapBoxComponent implements OnInit {
       "coordinates": [19.0154, 29.1549]
     },
     "properties": {
-      "title": "Schools in Zimbabwe",
+      "title": "Schools in Libya",
       "icon": "circle",
-      "description": "<h4>Schools in Zimbabwe!</h4>" +
+      "description": "<h4>Schools in Libya!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=3\" alt=\"Italian Trulli\">" +
-      "<h6>There is a serious lack of schools in the region of Zimbabwe!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<h6>There is a serious lack of schools in the region of Libya!</h6>" +
+      "<a href =\"/projects/6\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -64,7 +64,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Schools in Bangladesh!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=3\" alt=\"Italian Trulli\">" +
       "<h6>We need a secondary school!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a href =\"/projects/3\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -80,7 +80,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Developing the recycling in South Asia!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=56\" alt=\"Italian Trulli\">" +
       "<h6>We need better recycling!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a href =\"/projects/4\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -96,7 +96,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Donate for preventing child labour!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?image=245\" alt=\"Italian Trulli\">" +
       "<h6>We need to protect the children!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a href =\"/projects/5\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -112,7 +112,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Flood in the Amazon!</h4>" +
       "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
       "<h6>Please help the restoration of the area!</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a href =\"/projects/2\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
@@ -129,7 +129,7 @@ export class MapBoxComponent implements OnInit {
       "description": "<h4>Crops restoration project</h4>" +
       "<img src=\"https://picsum.photos/200/150/?random\" alt=\"Italian Trulli\">" +
       "<h6>Numerous crops were destroyed by a horrible storm.</h6>" +
-      "<button mat-button class=\"btn btn-default\" >VIEW</button>",
+      "<a href =\"/projects/7\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }
   };
 
