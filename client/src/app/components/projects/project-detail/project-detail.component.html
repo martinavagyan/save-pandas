@@ -18,14 +18,21 @@
         <input type="number" matInput placeholder="Amount in €">
       </mat-form-field>
       <button mat-fab style="background-color: green; color: white; height: 70px; width: 70px;">Donate</button>
-          <h2>Goals:</h2>
-      <ngx-timeline [events]="projectGoals">
-        <ng-template let-event let-index="rowIndex" timelineHeader>
-          <h5>{{event.milestoneName}}</h5>
-          <br>
-          <h6>{{event.location}} {{event.timestamp}}</h6>
-        </ng-template>
-      </ngx-timeline>
+      <ng-container *ngIf="isLoadingDone">
+        <ngx-timeline [events]="projectGoals">
+          <ng-template let-event let-index="rowIndex" timelineHeader>
+            <h5>{{event.milestoneName}}</h5>
+            <br>
+            <h6>{{event.location}} {{event.timestamp}}</h6>
+          </ng-template>
+        </ngx-timeline>
+        <h2>Goals:</h2>
+      </ng-container>
+      <div class = "margin-auto" *ngIf="!isLoadingDone">
+        <h2>Loading Tangle</h2>
+        <img class = "iota-logo" [src]="iotaUrl">
+        <mat-spinner></mat-spinner>
+      </div>
     </div>
   </div>
   <hr>

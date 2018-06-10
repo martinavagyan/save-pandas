@@ -18,6 +18,9 @@ export class ProjectDetailComponent implements OnInit {
   };
   public resourcesGathered: Number[] = [20, 30, 50];
   public resourcesGatheredLabels = ['Water (%)', 'Training (%)', 'Medicine (%)'];
+  public isLoadingDone: boolean = false;
+  public iotaUrl: string = "assets/iota.png"
+
   public volunteersTrained: Object[] = [{data: [250], label: 'Volunteer training'}, { data: [250], label: 'Medicine' }, ];
   public pandasSaved: Object[] = [ { data: [34], label: 'Field hospitals' }, { data: [250], label: 'L of water' }, { data: [40], label: 'Trucks with medicine' },  ];
   public projectGoals: Array<Transaction> = null;
@@ -30,12 +33,12 @@ export class ProjectDetailComponent implements OnInit {
     // this.transactionService.addTransaction(this.projectGoals[0]).subscribe();
     // this.transactionService.addTransaction(this.projectGoals[1]).subscribe();
     // this.transactionService.addTransaction(this.projectGoals[2]).subscribe();
-    this.loadingDone = false;
+    this.isLoadingDone = false;
 
     this.transactionService.getLatestNTransactions(5).subscribe((result) => {
       console.log(result);
       this.projectGoals = result;
-      this.loadingDone = true;
+      this.isLoadingDone = true;
     });
   }
 
