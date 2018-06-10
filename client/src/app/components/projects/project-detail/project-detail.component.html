@@ -8,8 +8,53 @@
   <p>{{project.shortDescription}}</p>
   <mat-divider></mat-divider>
   <div class="row">
-    <div class="col-6 col-md-6">
-      <p align="justify">{{project.fullDescription}}</p>
+    <div class="col-6 col-md-6"><br>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <!-- First paragraph -->
+        <h3>Volunteers</h3>
+        <mat-grid-tile>
+          <p align="justify">
+            When that didn’t work, he took a taxi to a health center—and died on the way
+            (Both the driver, and a third individual who cared for the man, also eventually died.) The center quickly suspected Ebola
+          </p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <canvas baseChart [chartType]="'bar'" [datasets]="volunteersTrained"></canvas>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list><br><br><hr>
+      <!-- Second paragraph -->
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <h3>Resources</h3>
+        <mat-grid-tile>
+          <mat-card>
+            <canvas baseChart [chartType]="'doughnut'" [data]="resourcesGathered" [labels]="resourcesGatheredLabels"></canvas>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+        <p align="justify">
+            The staff there had the right knowledge, training, and connections—they ran some preliminary tests while also calling international colleagues. Rimoin flew over with the latest diagnostics. The center quickly suspected Ebola
+          </p>
+        </mat-grid-tile>
+      </mat-grid-list><br><br><hr>
+      <!-- Third paragraph -->
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <h3>Development</h3>
+        <mat-grid-tile>
+          <p align="justify">
+            The center quickly suspected Ebola and immediately sent samples to a national laboratory in Kinshasa. The staff there had the right knowledge, training, and connections—they ran some preliminary tests while also calling international colleagues.
+          </p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card>
+            <canvas baseChart [chartType]="'bar'" [datasets]="pandasSaved"></canvas>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <p>
+        Rimoin flew over with the latest diagnostics.When that didn’t work, he took a taxi to a health center—and died on the way. (Both the driver, and a third individual who cared for the man, also eventually died.) The center quickly suspected Ebola and immediately sent samples to a national laboratory in Kinshasa. The staff there had the right knowledge, training, and connections—they ran some preliminary tests while also calling international colleagues. Rimoin flew over with the latest diagnostics.When that didn’t work, he took a taxi to a health center—and died on the way. (Both the driver, and a third individual who cared for the man, also eventually died.)
+      </p>
     </div>
     <div class="col-6 col-md-6">
       <h1>Total pledge: 1,000,000€</h1>
@@ -43,7 +88,7 @@
     </div>
   </div>
   <hr>
-  <div class="row">
+  <!-- <div class="row">
     <mat-grid-list cols="3" rowHeight="2:1">
       <mat-grid-tile>
         <mat-card>
@@ -65,5 +110,5 @@
       </mat-grid-tile>
     </mat-grid-list>
     <hr>
-  </div>
+  </div> -->
 </div>

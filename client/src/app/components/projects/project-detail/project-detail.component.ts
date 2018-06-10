@@ -21,7 +21,7 @@ export class ProjectDetailComponent implements OnInit {
   public isLoadingDone: boolean = false;
   public iotaUrl: string = "assets/iota.png"
 
-  public volunteersTrained: Object[] = [{data: [250], label: 'Volunteer training'}, { data: [250], label: 'Medicine' }, ];
+  public volunteersTrained: Object[] = [{data: [250], label: 'Volunteer training'}, { data: [275], label: 'Medicine' }, ];
   public pandasSaved: Object[] = [ { data: [34], label: 'Field hospitals' }, { data: [250], label: 'L of water' }, { data: [40], label: 'Trucks with medicine' },  ];
   public projectGoals: Array<Transaction> = null;
 
