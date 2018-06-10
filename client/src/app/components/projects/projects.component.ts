@@ -9,7 +9,7 @@ export class ProjectsComponent implements OnInit {
   public isMapVisible: Boolean = true;
   public sampleProjects = [{
     "id": 1,
-    "title": "Water initiative in saharan africa",
+    "title": "Ebola outbreak in DRC",
     "subtitle": "Antigen Laboratories, Inc.",
     "short_description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
     "full_description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",

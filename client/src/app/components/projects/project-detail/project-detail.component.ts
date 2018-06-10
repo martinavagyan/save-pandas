@@ -19,7 +19,7 @@ export class ProjectDetailComponent implements OnInit {
   public resourcesGathered: Number[] = [20, 30, 50];
   public resourcesGatheredLabels = ['Water (%)', 'Training (%)', 'Medicine (%)'];
   public volunteersTrained: Object[] = [{data: [250], label: 'Volunteers Trained'}];
-  public pandasSaved: Object[] = [ { data: [34], label: 'Pandas Saved' } ];
+  public pandasSaved: Object[] = [ { data: [34], label: 'Pandas Saved' }, { data: [250], label: 'Water' } ];
   public projectGoals: Array<Transaction> =null;
     // [
     //   {

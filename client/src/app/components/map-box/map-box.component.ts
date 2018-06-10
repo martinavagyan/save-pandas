@@ -27,10 +27,10 @@ export class MapBoxComponent implements OnInit {
       "coordinates": [30.200108, 19.780782]
     },
     "properties": {
-      "title": "Water In Africa",
+      "title": "Ebola outbreak in DRC",
       "icon": "circle",
-      "description": "<h4>Water initiative in Saharan Africa</h4>" +
-      "<img src=\"https://picsum.photos/200/150/?image=171\" alt=\"Italian Trulli\">" +
+      "description": "<h4>Ebola outbreak in DRC</h4>" +
+      "<img src=\"../../../assets/DWB1.jpg\" alt=\"Italian Trulli\">" +
       "<h6>We need more water!</h6>" +
       "<a href =\"/projects/1\" class=\"btn btn-default\"><span class=\"fa fa-user\"></span> View Project</a>",
     }

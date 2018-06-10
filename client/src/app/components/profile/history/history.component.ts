@@ -14,7 +14,7 @@ export class HistoryComponent {
     {
       donationDate: new Date(2017, 11, 30),
       donation: 1000,
-      charityName: 'Water initiative in Africa',
+      charityName: 'Ebola outbreak in DRC',
       projectId: 1
     },
     {
