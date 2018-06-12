@@ -106,11 +106,11 @@ module.exports = (passport: any) => {
             console.log("We got so far, ", root);
             channelCtrl.insert(root, res);
         });
-    }
+    };
 
     publicModule.get_latest_transactions = (req: any, res: any) => {
         channelCtrl.getLatest(iotaService, res, req);
-    }
+    };
 
     /**
      * If doing a JWT validation use the follwoing before the api call

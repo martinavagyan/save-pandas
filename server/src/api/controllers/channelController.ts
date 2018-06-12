@@ -12,7 +12,7 @@ export default class ChannelClass<T extends any> extends Base<T> {
 
     public insert(root: any, res: any) {
         const obj = new this.model({
-            root: root
+            root,
         });
         obj.save((err: any, item: any) => {
             if (err) {
@@ -24,20 +24,20 @@ export default class ChannelClass<T extends any> extends Base<T> {
 
     public getLatest = (iotaService: any, res: any, req: any): any => {
         const numberOfTransactions = req.params.numberOfTransactions;
-        let promiseAll: any[] = [];
-        let finalArray: any[] = []
-        this.model.find({}).sort({"_id": -1}).limit().exec((err: any, posts: any) => {
+        const promiseAll: any[] = [];
+        const finalArray: any[] = [];
+        this.model.find({}).sort({_id: -1}).limit().exec((err: any, posts: any) => {
             posts = posts.slice(0, numberOfTransactions);
             const iota = iotaService.getIota();
             iotaService.initialiseMamState(iota);
-            for (let post of posts) {
+            for (const post of posts) {
                 promiseAll.push(
                     iotaService.getMam().fetch(post.root, 'public', null, (transaction: any) => {
                         finalArray.push(JSON.parse(iota.utils.fromTrytes(transaction)));
-                    })
+                    }),
                 );
             }
-            Promise.all(promiseAll).then(() =>{
+            Promise.all(promiseAll).then(() => {
                 res.status(200).json(finalArray);
             });
         });

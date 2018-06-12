@@ -2,7 +2,7 @@ import Base from "../api/controllers/baseController";
 
 const IOTA = require("iota.lib.js");
 const iota = new IOTA({provider: "http://node01.testnet.iotatoken.nl:16265"});
-const mam = require('../../lib/mam.node.js')
+const mam = require('../../lib/mam.node.js');
 const keygen = require('keygen');
 const crypto = require('crypto');
 
@@ -11,7 +11,8 @@ const crypto = require('crypto');
  * the method 'insert' uses 'save' option of mongoose model to save an entry
  * */
 
-export default class IotaService{
+export default class IotaService {
+    // tslint:disable-next-line:no-shadowed-variable
     public initialiseMamState = (iota: any): any => {
         return mam.init(iota);
     }
@@ -26,10 +27,10 @@ export default class IotaService{
 
     public attachMessage = async (packet: any): Promise<void> => {
         try {
-            let trytes = iota.utils.toTrytes(JSON.stringify(packet));
+            const trytes = iota.utils.toTrytes(JSON.stringify(packet));
             let mamState = this.initialiseMamState(iota);
             console.log('mamState', mamState);
-            let message = mam.create(mamState, trytes);
+            const message = mam.create(mamState, trytes);
 
             // Save new mamState
             mamState = message.state;
@@ -41,10 +42,8 @@ export default class IotaService{
 
             // Fetch Stream Async to Test
             return message.root;
-        }
-        catch (e) {
+        } catch (e) {
             console.log('error while publishing');
         }
     }
 }
-

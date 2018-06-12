@@ -6,7 +6,7 @@ export interface IChannel {
 }
 
 const ChannelSchema: Schema = new Schema({
-    root: String
+    root: String,
 });
 
 export interface IChannelModel extends IChannel, Document {
